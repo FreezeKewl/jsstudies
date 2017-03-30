@@ -130,7 +130,7 @@ document.write(longstr.charAt(4));
 document.write("<hr>");
 document.write(longstr.charCodeAt(4));
 document.write("<hr>");
-document.write(longstr.endsWith('?'));
+document.write(longstr.endsWith('|'));
 document.write("<hr>");
 document.write(longstr.repeat(3));
 document.write("<hr>");
@@ -253,6 +253,148 @@ document.write("<hr>");
 document.write(arr3.length);
 document.write("<hr>");
 
+// Sorting Numbers
+
+points = [40, 100, 1, 5, 25];
+document.write(points.sort());
+document.write("<hr>");
+
+//Sort Numbers
+document.write(points.sort(function(a,b){
+	//document.write(a+'-'+b+'=')+)(a-b)+'<br>';
+	return a-b;
+}
+
+));
+document.write("<hr>");
+
+//multidimensional arrays
+instruments = ['guitar','drums','bass'];
+genre = ['rock','hiphop', 'classical'];
+document.write(instruments);
+document.write("<hr>");
+document.write(genre);
+document.write("<hr>");
+
+musicHobbies = [instruments, genre];
+document.write(musicHobbies);
+document.write("<hr>");
+document.write(musicHobbies[0][0]);
+document.write("<hr>");
+document.write(musicHobbies[1][1]);
+document.write("<hr>");
+
+superhero = {
+	fname:'Clark',
+	lname: 'Kent',
+	hname: 'Superman',
+	glasses: false,
+	powers: 12,
+	weaknesses: 2
+};
+
+document.write(superhero['hname']);
+document.write("<hr>");
+document.write(superhero.lname);
+document.write("<hr>");
+
+RandomGuy = {
+fname:'John',
+lname:'Doe',
+age:	50,
+eyeColor:'brown',
+height: 'six feet',
+fullname: function(){
+	return this.fname +" "+ this.lname;
+	}
+};
+
+//append to object
+RandomGuy['shoeSize'] = 46;
+RandomGuy['glasses'] = true;
+
+document.write(RandomGuy.fullname);
+document.write("<hr>");
+document.write(RandomGuy.fullname());
+document.write("<hr>");
+
+//Comparisons
+
+document.write('5 is equal to 5:');
+document.write(5 == 5);
+document.write("<hr>");
+document.write('5 is equal to 5:');
+document.write(5 == 5);
+document.write("<hr>");
+document.write("'5' is equal to 5:");
+document.write(5 === 5);
+document.write("<hr>");
+document.write('5 is less than 10:');
+document.write(5 < 10);
+document.write("<hr>");
+document.write('5 is less than or equal to 10:');
+document.write(5 <= 10);
+document.write("<hr>");
+
+document.write('5 is greater than to 10:');
+document.write(5 > 10);
+document.write("<hr>");
+
+document.write('5 is greater than or equal to 10:');
+document.write(5 >= 10);
+document.write("<hr>");
+
+//Logical Operators
+
+c1 = 5;
+c2 = 10;
+
+document.write('5 is less than 10 ');
+document.write('5 is greater than 0 ');
+document.write((c1 < 10) && (c1 > 0));
+document.write("<hr>");
+
+document.write('5 is equal to 10 ');
+document.write('5 is greater than 0 ');
+document.write((c1 == 10) || (c1 > 0));
+document.write("<hr>");
+
+document.write('5 is equal to 10 ');
+document.write('5 is greater than 0');
+document.write(!(c1 == 10) || (c1 < 0));
+document.write("<hr>");
+
+document.write('5 is NOT equal to 10 ');
+document.write('5 is NOT less than 0 ');
+document.write(!(c1 == 10) && (c1 < 0));
+document.write("<hr>");
+
+//Conditionals
+//ternary shorthand
+
+display = (10 == c2)? true : false;
+document.write(display);
+document.write("<hr>");
+
+myColor = "Red";
+if((myColor == 'Red') || (myColor == 'Blue')){
+		document.write(myColor + " is my favorite color! ");
+	}else if(myColor == 'Yellow'){
+		document.write(myColor + " is my least color! ");
+	}else{
+		document.write(myColor + " is not my favorite color! ");
+	}
+	document.write("<hr>");
+//Switch Statement
+switch(myColor){
+	case 'Red':
+	case 'Blue':
+		document.write(myColor + " is my favorite color! ");break;
+	case 'Yellow':
+		document.write(myColor + " is my least favorite color! ");break;
+	default:
+		document.write(myColor + " is not my favorite color! ");
+}
 
 
 
@@ -261,3 +403,5 @@ document.write("<hr>");
 
 </body>
 </html>
+
+https://github.com/FreezeKewl/jsstudies.git
