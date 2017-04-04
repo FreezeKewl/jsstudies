@@ -385,7 +385,9 @@ if((myColor == 'Red') || (myColor == 'Blue')){
 		document.write(myColor + " is not my favorite color! ");
 	}
 	document.write("<hr>");
+
 //Switch Statement
+
 switch(myColor){
 	case 'Red':
 	case 'Blue':
@@ -395,7 +397,99 @@ switch(myColor){
 	default:
 		document.write(myColor + " is not my favorite color! ");
 }
+document.write("<hr>");
 
+function playFunc(){
+	var jim = 100;
+	var joe = 1;
+	document.write('Lets add things together: ');
+	// document.write(no1 + no2);
+	document.write(jim + joe);
+};
+
+	playFunc();
+
+	document.write('<hr>');
+
+function sum10(n1, n2){
+	return (n1 + n2) * 10;
+};
+
+	document.write(sum10(3, 1));
+
+// function Expression
+
+exFunc = function(p1){
+	document.write(p1 * 10);
+};
+
+document.write("<hr>");
+
+exFunc(2);
+document.write('<hr>');
+
+// Self Envoked Function
+
+(function(){
+	document.write('This executed without a call');
+})();
+
+//This refers to an instance
+
+function myFunction(){
+	return this;
+};
+
+// console.log(myFunction());
+
+// Loops
+
+document.write('<hr>');
+document.write("<b>loops execute a set amount of times</b>");
+
+for(var i = 0; i < 10; ++i){
+	document.write(i + '<br>');
+};
+
+// For Loop Example
+
+beers=['Corona', 'Modelo','Heineken','Bud'];
+for(var i = 0; i < beers.length; ++i){
+	document.write(i +': '+ beers[i] + '<br>');
+}
+
+// While Loops
+
+var bi = 0;
+while(bi < beers.length){
+	document.write(bi +': '+ beers[bi] + '<br>');
+	++bi;
+};
+
+// do While Loop
+
+var bidx= 0;
+do{
+	document.write(bidx +': '+ beers[bidx] + '<br>');
+	++bidx;
+}
+while(bidx < beers.length);
+
+// For/in Loop: works well with objects
+
+person = {
+	fname:'John',
+	lname:'doe',
+	id: 1234
+};
+
+document.write('for in loop example');
+objKeyVal='';
+for(key in person){
+	objKeyVal +=  person[key] + ' ';
+	document.write('<p>' + objKeyVal + '</p>');
+};
+	document.write(" " + objKeyVal);
 
 
 
@@ -404,4 +498,3 @@ switch(myColor){
 </body>
 </html>
 
-https://github.com/FreezeKewl/jsstudies.git
